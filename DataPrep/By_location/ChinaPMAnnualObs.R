@@ -15,7 +15,7 @@ values$station.name = gsub('X', '',  values$station.name)
 
 #rename some columns
 station <- station %>%
-  rename(station.name = ï..station.name)
+  rename(station.name = Ã¯..station.name)
 
 #merge datasets
 annual_data <- merge(values, station, by = "station.name")
