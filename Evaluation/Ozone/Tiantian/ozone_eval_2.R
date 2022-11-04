@@ -146,9 +146,9 @@ evals.fn <- function( Yhat, Yact){
   metrics <- data.table( N = as.double( ifelse( N == 0, NaN, N)),
                          NMB_pct = 100 * (num.diff / denom),
                          NME_pct = 100 * ( abs.diff / denom),
-                         MB_µgm3 = num.diff / N,
-                         ME_µgm3 = abs.diff / N,
-                         RMSE_µgm3 = sqrt( sum( ( eval.dt$Yhat - eval.dt$Yact) ^ 2) / N),
+                         MB_Âµgm3 = num.diff / N,
+                         ME_Âµgm3 = abs.diff / N,
+                         RMSE_Âµgm3 = sqrt( sum( ( eval.dt$Yhat - eval.dt$Yact) ^ 2) / N),
                          R2 = cor( eval.dt$Yhat, eval.dt$Yact, method = 'pearson') ^ 2)
   return( metrics)
 }
